@@ -1,16 +1,20 @@
 
-const EDGE = 500;
+const EDGE = 1300;
 
-TweenMax.to('.cloud-small', 3, {
-  x: '-=500', //move each box 500px to right
+TweenMax.set('.cloud-small', {
+  visibility: 'visible',
+  x: '50%',
+})
+
+const tween = TweenMax.to('.cloud-small', 30, {
+  x: `${EDGE}`, //move each box 500px to right
   ease: Power0.easeNone,
   modifiers: {
     x: function(x) {
-      // if (x === )
-      // console.log(Math.abs(x) ===  ? x % -500 : x % -500)
-      // return Math.abs(x) === 500 ? x % -500 : x % -500; //force x value to be between 0 and 500 using modulus
-      return x % 500;
+      return (x % EDGE) - EDGE/2;
     },
   },
   repeat: -1,
 });
+
+tween.seek(25);
