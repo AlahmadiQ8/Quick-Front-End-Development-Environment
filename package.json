@@ -7,14 +7,18 @@
     "start": "concurrently \"npm run server\" \"npm run watch-sass\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-sass": "sass --watch site/static/css/main.scss:site/static/css/main.css",
-    "server": "lite-server"
+    "server": "lite-server",
+    "babel": "babel site/src -d site/dist",
+    "babel-watch": "babel --watch site/src -d site/dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "concurrently": "^3.4.0",
     "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
-
-
