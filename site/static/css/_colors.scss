@@ -1,5 +1,7 @@
 //
 // color palette
+//
+// https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
 
 @function color($color, $value: 500) {
   @return map-get($color, $value);
@@ -315,3 +317,11 @@ $blue-grey: (
   800:  #37474f,
   900:  #263238
 );
+
+$colors: (
+  'blue': $blue,
+  'red': $red,
+  'orange': $orange,
+  'green': $green,
+  'purple': $purple,
+)
